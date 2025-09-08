@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Floresta Misteriosa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container" id="login-container">
+    <h2>Entrar</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Usuário" required>
+      <input type="password" id="password" placeholder="Senha" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div class="menu" id="menu" style="display:none;">
+    <h2>Bem-vindo, Rafael!</h2>
+    <ul>
+      <li><button onclick="alert('Abrindo perfil...')">Perfil</button></li>
+      <li><button onclick="alert('Abrindo configurações...')">Configurações</button></li>
+      <li><button onclick="alert('Saindo...')">Sair</button></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Criado por Rafael Loran</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
