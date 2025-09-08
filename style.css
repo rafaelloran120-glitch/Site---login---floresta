@@ -1,74 +1,41 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-  background: #000;
-  overflow-x: hidden;
+/* Fundo com imagem da galáxia */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
 }
 
-canvas#estrelas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+/* Coloca uma leve sombra no texto pra não sumir no fundo */
+h1, h2, p {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.2em;
-  color: #9cf6ff;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+/* Menu fixo no topo */
+nav {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: #9cf6ff;
+    color: #00ccff;
 }
 
-main {
-  padding: 40px;
-  max-width: 800px;
-  margin: auto;
-}
-
+/* Seções */
 section {
-  margin-bottom: 50px;
-}
-
-section h2 {
-  color: #9cf6ff;
-  border-bottom: 2px solid #9cf6ff;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.7);
+    padding: 100px 20px;
+    min-height: 100vh;
 }
