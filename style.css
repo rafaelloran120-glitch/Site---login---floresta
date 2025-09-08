@@ -1,57 +1,83 @@
-/* Fundo galáxia */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #fff;
-  background: url("https://www.solarsystemscope.com/textures/download/2k_stars_milky_way.jpg") no-repeat center center fixed;
+  color: white;
+  background: url("https://i.ibb.co/6DFV5gT/galaxy.jpg") no-repeat center center fixed;
   background-size: cover;
-  min-height: 100vh;
 }
 
-/* Cabeçalho */
 header {
   background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
+  padding: 15px;
   text-align: center;
-  border-bottom: 2px solid #4cafef;
 }
 
-/* Menu */
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
 nav a {
-  color: #4cafef;
   margin: 0 10px;
+  color: #00ffff;
   text-decoration: none;
   font-weight: bold;
 }
+
 nav a:hover {
-  text-decoration: underline;
+  color: #ff00ff;
 }
 
-/* Conteúdo */
 main {
   padding: 20px;
-}
-section {
-  margin: 30px auto;
-  padding: 20px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 10px;
-  max-width: 800px;
-}
-h2 {
-  color: #4cafef;
-  border-bottom: 1px solid #4cafef;
-  padding-bottom: 10px;
-}
-ul {
-  list-style: disc;
-  padding-left: 20px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-/* Rodapé */
+h2 {
+  color: #00ffff;
+}
+
+.lista {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.lista ul {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 300px;
+  list-style: none;
+}
+
+.lista li {
+  margin: 5px 0;
+}
+
+.botoes {
+  margin-top: 10px;
+}
+
+.botoes button {
+  background: #ff00ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botoes button:hover {
+  background: #00ffff;
+  color: black;
+}
+
 footer {
   text-align: center;
   padding: 15px;
-  background: rgba(0,0,0,0.7);
-  border-top: 2px solid #4cafef;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
 }
