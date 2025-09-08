@@ -3,30 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Floresta Misteriosa</title>
+  <title>Universo do Rafael 🌌</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container" id="login-container">
-    <h2>Entrar</h2>
-    <form id="login-form">
-      <input type="text" id="username" placeholder="Usuário" required>
-      <input type="password" id="password" placeholder="Senha" required>
-      <button type="submit">Login</button>
-    </form>
-  </div>
+  <canvas id="estrelas"></canvas>
+  
+  <header>
+    <h1>🌌 Universo do Rafael</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#python">Python</a></li>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="menu" id="menu" style="display:none;">
-    <h2>Bem-vindo, Rafael!</h2>
-    <ul>
-      <li><button onclick="alert('Abrindo perfil...')">Perfil</button></li>
-      <li><button onclick="alert('Abrindo configurações...')">Configurações</button></li>
-      <li><button onclick="alert('Saindo...')">Sair</button></li>
-    </ul>
-  </div>
+  <main>
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>Oi, eu sou <strong>Rafael Loran</strong>, tenho 14 anos e adoro tecnologia e programação. 🚀</p>
+    </section>
+
+    <section id="python">
+      <h2>O que é Python?</h2>
+      <p>Python é uma linguagem de programação simples e poderosa. Usada em inteligência artificial, ciência de dados, sites e muito mais.</p>
+    </section>
+
+    <section id="java">
+      <h2>O que é Java?</h2>
+      <p>Java é uma linguagem robusta, muito usada em sistemas grandes, servidores e aplicativos Android.</p>
+    </section>
+
+    <section id="curiosidades">
+      <h2>Curiosidades</h2>
+      <ul>
+        <li>🌍 A NASA usa Python em alguns projetos.</li>
+        <li>📱 O Minecraft foi feito em Java.</li>
+        <li>🌌 Existem mais estrelas no universo do que grãos de areia na Terra.</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>Criado por Rafael Loran</p>
+    <p>Feito por Rafael Loran © 2025</p>
   </footer>
 
   <script src="script.js"></script>
