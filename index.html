@@ -3,33 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curiosidades - Rafael Loran</title>
+  <title>Site do Rafael Loran</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Bem-vindo ao site de Rafael Loran</h1>
-    <p>Idade: 14 anos | Estudando Python e Java</p>
+    <h1>🌌 Bem-vindo ao Universo do Rafael Loran</h1>
     <nav>
-      <a href="#java">Java</a>
-      <a href="#python">Python</a>
+      <a href="#autor">Autor</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#mensagem">Mensagem</a>
     </nav>
   </header>
 
   <main>
-    <section id="java">
-      <h2>Curiosidades sobre Java</h2>
-      <ul id="java-curiosidades"></ul>
+    <section id="autor">
+      <h2>👨‍💻 Sobre o Autor</h2>
+      <p>Olá, meu nome é <strong>Rafael Loran</strong>. Tenho 14 anos e curto muito programação, Java, Python e o universo!</p>
     </section>
 
-    <section id="python">
-      <h2>Curiosidades sobre Python</h2>
-      <ul id="python-curiosidades"></ul>
+    <section id="curiosidades">
+      <h2>🚀 Curiosidades sobre Java e Python</h2>
+      <div class="lista">
+        <h3>🐍 Python</h3>
+        <ul>
+          <li>Python foi criado em 1991 por Guido van Rossum.</li>
+          <li>É muito usado em Inteligência Artificial e Ciência de Dados.</li>
+          <li>A sintaxe do Python é simples e parecida com inglês.</li>
+          <li>É uma das linguagens mais populares do mundo.</li>
+          <li>O nome vem do grupo de comédia "Monty Python".</li>
+        </ul>
+
+        <h3>☕ Java</h3>
+        <ul>
+          <li>Java foi criado em 1995 pela Sun Microsystems.</li>
+          <li>É famoso pelo lema "escreva uma vez, rode em qualquer lugar".</li>
+          <li>É usado em milhões de dispositivos Android.</li>
+          <li>É uma das linguagens mais antigas ainda em uso.</li>
+          <li>Grandes empresas como Netflix e Amazon usam Java.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="mensagem">
+      <h2>💌 Mensagem Especial</h2>
+      <p><strong>Isys</strong>, sua imunda... Te amo! 💜 Casa comigo? kkkkk</p>
+      <div class="botoes">
+        <button onclick="respostaIsys('sim')">Sim</button>
+        <button onclick="respostaIsys('nao')">Não</button>
+      </div>
+      <p id="resposta"></p>
     </section>
   </main>
 
   <footer>
-    <p>Site desenvolvido por <strong>Rafael Loran</strong> 🚀</p>
+    <p>🌟 Criado por Rafael Loran © 2025</p>
   </footer>
 
   <script src="script.js"></script>
