@@ -1,38 +1,38 @@
-// ====== LOGIN ======
-function login(event) {
-  event.preventDefault(); // Impede o reload da página
-  const user = document.getElementById("username").value;
-  const pass = document.getElementById("password").value;
+const canvas = document.getElementById("estrelas");
+const ctx = canvas.getContext("2d");
 
-  // Usuário e senha fixos (pode trocar depois)
-  if (user === "rafael" && pass === "1234") {
-    alert("Bem-vindo, " + user + "!");
-    window.location.href = "dashboard.html"; // Redireciona pro painel
-  } else {
-    alert("Usuário ou senha incorretos!");
-  }
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const estrelas = [];
+
+for (let i = 0; i < 200; i++) {
+  estrelas.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    raio: Math.random() * 1.5,
+    brilho: Math.random(),
+    velocidade: Math.random() * 0.05
+  });
 }
 
-// ====== MENU ANIMAÇÃO ======
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav-links a");
-
-  links.forEach(link => {
-    link.addEventListener("mouseover", () => {
-      link.style.color = "#00ff99";
-    });
-
-    link.addEventListener("mouseout", () => {
-      link.style.color = "#fff";
-    });
+function desenhar() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
+  estrelas.forEach(e => {
+    e.brilho += e.velocidade;
+    const alpha = (Math.sin(e.brilho) + 1) / 2;
+    ctx.globalAlpha = alpha;
+    ctx.beginPath();
+    ctx.arc(e.x, e.y, e.raio, 0, Math.PI * 2);
+    ctx.fill();
   });
-});
+  requestAnimationFrame(desenhar);
+}
 
-// ====== MENSAGEM DE BOAS-VINDAS NO DASHBOARD ======
-window.onload = function() {
-  if (document.body.contains(document.querySelector("#home"))) {
-    setTimeout(() => {
-      alert("🚀 Bem-vindo ao site do Rafael!");
-    }, 1000);
-  }
-};
+desenhar();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
